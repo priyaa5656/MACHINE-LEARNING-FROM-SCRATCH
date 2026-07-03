@@ -63,6 +63,17 @@ ML = The machine learning from data.
 DL = The machine learning via Neural Networks.
 
 
+##  Real Life Examples Table
+| Application | Machine Learning Use |
+|-------------|----------------------|
+| YouTube | Video Recommendation |
+| Netflix | Movie Recommendation |
+| Gmail | Spam Detection |
+| Google Maps | Traffic Prediction |
+| Amazon | Product Recommendation |
+| Instagram | Reel Recommendation |
+| Uber | Fare Prediction |
+
 ## Types of Machine Learning
 you have to be remembered Only 4 type of Machine Learning
 1. Supervised Learning
@@ -73,6 +84,8 @@ you have to be remembered Only 4 type of Machine Learning
 
 ### (1) Supervised Learning
 Most important. The answer is also given along with the data.
+Training Data = Input + Correct Output
+
 Example :- House Size
 1000 sqft → ₹20 lakh
 1500 sqft → ₹30 lakh
@@ -102,13 +115,11 @@ Fries
 Food Lover
 
 The machine automatically forms the clusters.
-
 Example
 Customer Segmentation
 
 
 ### (3) Reinforcement Learning
-
 Machines learn from rewards and punishments.
 Example
 Chess AI
@@ -126,10 +137,10 @@ Some labeled, some unlabeled
 Both mixed.
 
 ## Trick to remember
-Supervised- Teacher gives the answer.
-Unsupervised-Form your own group.
-Reinforcement-Learn from rewards.
-Semi-Half answer.
+Supervised-    Teacher gives the answer.
+Unsupervised-  Form your own group.
+Reinforcement- Learn from rewards.
+Semi-          Half answer.
 
 
 ## Machine Learning Workflow
@@ -151,111 +162,80 @@ Deploy
 prediction
 
 Example: House Price Prediction
-Problem → House price predict karna.
+Problem →      House price predict karna.
 Collect Data → Area, rooms, location, age.
-Clean Data → Missing values, remove duplicates.
+Clean Data →    Missing values, remove duplicates.
 Feature Engineering → Creating useful features.
-Train Model → Learning the model from data.
-Evaluate → Accuracy check.
+Train Model →    Learning the model from data.
+Evaluate →      Accuracy check.
 Deploy → Use in Website/App.
 Prediction → The price of the new house.
 
 
-6. Common Terminology
-Dataset
-
-Poora data.
+### Common Terminology
+Dataset: Poora data.
 
 Example:
-
 Area	Rooms	Price
-1000	2	20L
-1500	3	30L
+1000	2	   20L
+1500	3	   30L
+
 Feature (X)
-
-Input.
-
-Example:
-
+Input Example:
 Area
 Rooms
 Age
+
 Label / Target (y)
-
-Output.
-
-Example:
-
+Output Example:
 Price
-Training Data
 
-Model isi data se seekhta hai.
+Training Data—
+The data from which the model learns.
 
-Test Data
+Test Data—
+For the model to take a test.
 
-Model ko exam dene ke liye.
-
-Model
-
-Jo patterns seekhta hai.
+Model—
+The component that learns patterns.
 
 Example:
-
 Linear Regression
-
 Decision Tree
-
 Random Forest
-Prediction
 
-Model ka answer.
+
+Prediction
+Model answer.
 
 Ek Simple Diagram
 Features (X)
-
 Area
-
 Rooms
-
 Age
-
 ↓
-
 Model
-
 ↓
-
 Prediction (y)
-
 Price
-7. First Scikit-learn Program 🎉
 
-Ye tumhara pehla ML program hoga.
+✅ 15. Add New Section
+## Difference Between AI, ML and Deep Learning
+| AI                         | ML               | DL |
+| ---------------------------|----------------- |----|
+| Broad field                | Subset of AI     | Subset of ML |
+| Makes machines intelligent | Learns from data | Uses Neural Networks |
+| Example: Siri              | Netflix          | ChatGPT |
 
-from sklearn.linear_model import LinearRegression
-import numpy as np
 
-# Features (House Area)
-X = np.array([[1000], [1500], [2000]])
+## Summary
+✔ AI makes machines intelligent.
+✔ Machine Learning allows machines to learn from data.
+✔ Deep Learning uses Neural Networks.
+✔ Machine Learning has four major types.
+✔ Every ML project follows a standard workflow.
+✔ Features are inputs.
+✔ Labels are outputs.
 
-# Labels (House Price in Lakhs)
-y = np.array([20, 30, 40])
 
-# Create Model
-model = LinearRegression()
 
-# Train Model
-model.fit(X, y)
-
-# Predict Price of 1800 sqft house
-prediction = model.predict([[1800]])
-
-print("Predicted Price:", prediction[0], "Lakhs")
-Output (approx.)
-Predicted Price: 36.0 Lakhs
-Is code me kya hua?
-X → Input (house area)
-y → Output (price)
-LinearRegression() → Model banaya
-fit() → Model ko train kiya
-predict() → Naye house ka price predict kiya
