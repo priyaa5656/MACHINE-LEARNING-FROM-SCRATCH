@@ -48,6 +48,7 @@ Linear Regression predicts the answer.
 Because it tries to fit a straight line through the data.
 
 Imagine all data points are placed on a graph.
+```text
 Price
 ^
 40 ●
@@ -61,6 +62,7 @@ Price
 +---------------------------->
 1000   1500   2000
         Area
+```
 Linear Regression draws a straight line that best represents these points.
 
 Price
@@ -468,8 +470,7 @@ Price = 36
 Prediction:  ₹36 Lakh
 This is exactly how the Machine Learning model predicts new values.
 
-# Summary
-
+## Summary
 - `x` → Input (Feature)
 - `y` → Output (Prediction)
 - `m` → Slope (Rate of Change)
@@ -477,7 +478,188 @@ This is exactly how the Machine Learning model predicts new values.
 - `y = mx + b` → Formula used to predict the output.
 
 ---
+## How Does the Machine Find `m` and `b`?
+You might be thinking,
+> "Who gives the values of `m` and `b` to the machine?"
+The answer is: **Nobody.** The Machine Learning model finds them automatically during training.
 
+---
+## Imagine This
+Suppose we have this data:
+| House Area | Price |
+|------------|-------|
+|1000        |20|
+|1500        |30|
+|2000        |40|
+
+The machine looks at all the data points. Its goal is to draw a straight line that passes as close as possible to every point This line is called the **Best Fit Line**.
+
+
+---
+## Step 1: Give Data
+1000 → 20
+1500 → 30
+2000 → 40
+
+
+---
+## Step 2: Machine Learns
+The machine tries many different straight lines. Some lines are bad. Some lines are better. Finally, it finds the line that has the **smallest error**. That line becomes the Best Fit Line.
+
+
+---
+## Step 3: Machine Finds `m` and `b`
+After finding the Best Fit Line, the machine automatically calculates:
+- Best value of `m` (Slope)
+- Best value of `b` (Intercept)
+You don't have to calculate them manually.
+
+
+---
+## Step 4: Prediction
+Now a new house comes.
+House Area = 1800 sqft
+The machine already knows: y = mx + b
+It puts the value of `x` into the formula.
+x = 1800
+↓
+Formula
+↓
+Prediction
+↓
+₹36 Lakh
+
+
+---
+## Important Note
+When we use **Scikit-learn**, we only write:
+```python
+model.fit(X, y)
+```
+The `fit()` function automatically learns the best values of `m` and `b`. We don't need to calculate them ourselves.
+
+
+---
+## Easy Trick to Remember
+Data
+↓
+fit()
+↓
+Machine Learns
+↓
+Finds m and b
+↓
+predict()
+↓
+Answer
+
+
+---
+## Summary
+- We do not manually choose `m` and `b`.
+- The machine finds the best values during training.
+- The Best Fit Line is created automatically.
+- `predict()` uses the learned formula to make predictions.
+
+
+
+# Python Implementation
+Now let's implement Linear Regression using Python and Scikit-learn.
+```python
+from sklearn.linear_model import LinearRegression
+import numpy as np
+
+# Input Data (House Area)
+X = np.array([[1000],[1500],[2000]])
+
+# Output Data (House Price)
+y = np.array([20,30,40])
+
+# Create Model
+model = LinearRegression()
+
+# Train the Model
+model.fit(X, y)
+
+# Predict House Price
+prediction = model.predict([[1800]])
+
+# Print Result
+print("Predicted Price:", prediction[0], "Lakhs")
+```
+
+Output:  Predicted Price: 36.0 Lakhs
+
+
+## Line-by-Line Explanation
+
+### Import Library
+This imports the Linear Regression algorithm from the Scikit-learn library.
+
+```python
+from sklearn.linear_model import LinearRegression
+```
+
+---
+## Import NumPy
+NumPy is used to create arrays and work with numerical data.
+
+```python
+import numpy as np
+```
+
+
+---
+## Input Data
+This is the input data (Feature). It contains the house areas.
+
+```python
+X = np.array([[1000],[1500],[2000]])
+```
+
+
+---
+## Output Data
+This is the correct answer (Label). It contains the prices of the houses.
+```python
+y = np.array([20,30,40])
+```
+
+
+---
+## Create Model
+Creates a Linear Regression model. At this moment, the model has not learned anything.
+
+```python
+model = LinearRegression()
+```
+
+
+---
+## Train the Model
+The model learns the relationship between House Area and House Price.
+
+```python
+model.fit(X, y)
+```
+
+
+---
+## Prediction
+The trained model predicts the price of a 1800 sqft house.
+
+```python
+prediction = model.predict([[1800]])
+```
+
+
+---
+
+## Print
+Displays the predicted price on the screen.
+```python
+print("Predicted Price:", prediction[0], "Lakhs")
+```
 
 ## Questions
 1. What is Linear Regression?
@@ -503,7 +685,3 @@ This is exactly how the Machine Learning model predicts new values.
 21. What is Slope (`m`)?
 22. What is Intercept (`b`)?
 23. How does the formula make predictions?
-
-
-
-
