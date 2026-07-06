@@ -64,7 +64,7 @@ Price
         Area
 ```
 Linear Regression draws a straight line that best represents these points.
-
+```Text
 Price
 ^
 40           ● 
@@ -78,6 +78,7 @@ Price
 20  ●
 +---------------------------->
 1000   1500   2000
+```
 This straight line is called the Best Fit Line.
 
 ## What is Best Fit Line?
@@ -221,17 +222,18 @@ Example:
 Every graph has two lines.
 
 ### Horizontal Line (X-axis)
-The horizontal line is called the **X-axis**. It usually contains the **Input (Feature)**.
+The horizontal line is called the **X-axis**. It usually contains the **Input (Feature)**.  
 Example: House Area
 
+```text
 ---------------------------->
         X-axis
-
+```
 
 ### Vertical Line (Y-axis)
 The vertical line is called the **Y-axis**. It usually contains the **Output (Target)**.
 Example: House Price
-
+```text
 ^
 |
 |
@@ -239,7 +241,7 @@ Example: House Price
 |
 |
 Y-axis
-
+```
 
 ---
 
@@ -247,7 +249,7 @@ Y-axis
 For House Price Prediction,
 **X-axis = House Area**
 **Y-axis = House Price**
-
+```text
 
 Price (Y)
 ^
@@ -258,7 +260,7 @@ Price (Y)
 |
 | 
 +---------------------------->  Area (X)
-
+```
 
 
 ---
@@ -267,7 +269,7 @@ Now we place each house on the graph.
 House 1: 1000 sqft → ₹20 Lakh
 House 2: 1500 sqft → ₹30 Lakh
 House 3: 2000 sqft → ₹40 Lakh
-
+```text
 Graph:
 Price
 ^
@@ -282,7 +284,7 @@ Price
 
 +---------------------------------->Area
    1000      1500      2000
-
+```
 Each **●** is called a **Data Point**.
 
 
@@ -431,6 +433,7 @@ Simply remember:
 ## What is b? (Intercept)
 `b` is called the **Intercept**.It is the point where the line starts.
 Imagine the graph.
+```text
 Price
 ^
 |
@@ -438,7 +441,7 @@ Price
 |
 |
 +----------------------------> Area
-
+```
 The place where the line touches the Y-axis is called the **Intercept**.Usually, beginners don't need to worry much about this.
 
 Just remember:
