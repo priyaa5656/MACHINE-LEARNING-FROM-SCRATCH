@@ -83,6 +83,7 @@ This is Underfitting. The student did not even learn the basic concepts.
 ---
 ## Machine Learning Example
 Training Data
+```
 | Study Hours | Marks |
 |-------------|-------|
 |1|40|
@@ -90,6 +91,7 @@ Training Data
 |3|60|
 |4|70|
 |5|80|
+```
 The model cannot understand the pattern. Even if you ask: Study Hours = 3
 It may predict the wrong answer. The model fails on the Training Data. It also fails on the Testing Data.
 
@@ -144,10 +146,13 @@ Imagine you are preparing for an exam. You understand the concepts instead of me
 
 ---
 ## Example
+```
 Teacher teaches:
 2 + 2 = 4
 3 + 3 = 6
 4 + 4 = 8
+
+```
 Now in the exam,
 Teacher asks: 5 + 5 = ?
 Student answers: 10
