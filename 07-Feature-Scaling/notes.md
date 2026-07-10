@@ -26,85 +26,60 @@ vs
 5000000
 ```
 
-No.
-
-The salary value is much larger than the height value.
-
-If we give these values directly to a Machine Learning model,
-
-the model will pay much more attention to Salary and almost ignore Height.
-
-This can lead to poor learning.
+No. The salary value is much larger than the height value. If we give these values directly to a Machine Learning model, the model will pay much more attention to Salary and almost ignore Height. This can lead to poor learning. 
 
 So we first scale both values to a similar range.
 
+
 ---
+##  Real-Life Example 1
 
-# 🌍 Real-Life Example 1
-
-Imagine a race.
-
-Runner A starts at 0 meters.
-
-Runner B starts at 1000 meters.
+Imagine a race. Runner A starts at 0 meters. Runner B starts at 1000 meters.
 
 Can you compare who is faster?
 
-❌ No.
-
-Both runners should start from the same position.
+❌ No.Both runners should start from the same position.
 
 Feature Scaling does the same thing.
-
 It brings every feature to a similar scale before learning starts.
 
+
 ---
+## Example 2
 
-# 🌍 Real-Life Example 2
-
-Suppose you want to predict the price of a house.
-
-Your dataset looks like this.
+Suppose you want to predict the price of a house. Your dataset looks like this.
 
 | Area (sqft) | Age (Years) |
-|--------------|-------------|
-|1000|5|
-|1500|8|
-|2000|10|
+|-------------|-------------|
+|1000         |5|
+|1500         |8|
+|2000         |10|
 
 Notice the values.
 
 ```text
-Area
+| Area (sqft) | 
+|-------------|
+|1000         |
+|1500         |
+|2000         |
 
-1000
-1500
-2000
-
-Age
-
-5
-8
-10
+|Age|
+|---|
+|5  |
+|8  |
+|10 |
 ```
 
-Area has much bigger numbers.
+Area has much bigger numbers. Age has much smaller numbers.
 
-Age has much smaller numbers.
-
-Without Feature Scaling,
-
-the Machine Learning model may think
-
-Area is much more important,
-
-only because its numbers are larger.
+Without Feature Scaling, the Machine Learning model may think Area is much more important, only because its numbers are larger.
 
 This is not correct.
 
 ---
 
-# Another Example
+## Another Example
 
 Suppose a dataset contains:
 
@@ -126,17 +101,12 @@ Salary
 150000
 ```
 
-Clearly,
-
-Salary values are much bigger.
-
-The model may focus mostly on Salary.
+Clearly, Salary values are much bigger. The model may focus mostly on Salary.
 
 Feature Scaling makes both features comparable.
 
 ---
-
-# Why is Feature Scaling Important?
+## Why is Feature Scaling Important?
 
 Feature Scaling helps the Machine Learning model
 
@@ -146,43 +116,32 @@ Feature Scaling helps the Machine Learning model
 - Prevent one feature from dominating others.
 - Help Gradient Descent converge faster.
 
----
 
-# Which Algorithms Need Feature Scaling?
+---
+## Which Algorithms Need Feature Scaling?
 
 Feature Scaling is important for:
 
-✅ Linear Regression (Gradient Descent)
-
-✅ Logistic Regression
-
-✅ KNN
-
-✅ SVM
-
-✅ K-Means Clustering
-
+✅ Linear Regression (Gradient Descent)  
+✅ Logistic Regression  
+✅ KNN  
+✅ SVM  
+✅ K-Means Clustering  
 ✅ Neural Networks
+
 
 ---
 
 Feature Scaling is usually **not required** for:
 
-✅ Decision Tree
-
-✅ Random Forest
-
+✅ Decision Tree  
+✅ Random Forest  
 ✅ XGBoost
 
-Because these algorithms split data based on conditions,
+Because these algorithms split data based on conditions, not on distances.
 
-not on distances.
 
 ---
-
-# Easy Definition
-
-Feature Scaling is the process of converting features into a similar range so that every feature contributes fairly during model training.
 
 ---
 
@@ -213,27 +172,21 @@ Better Prediction
 ```
 
 ---
+## Easy word:
 
-# One-Line Definition
-
-Feature Scaling is a preprocessing technique used to bring different features into a similar numerical range before training a Machine Learning model.
+Feature Scaling is the process of converting features into a similar range so that every feature contributes fairly during model training.
 
 ---
+## Summary
 
-# Summary
-
-✅ Used before training the model.
-
-✅ Makes all features similar in scale.
-
-✅ Prevents large values from dominating.
-
-✅ Helps Gradient Descent learn faster.
-
+✅ Used before training the model.  
+✅ Makes all features similar in scale.  
+✅ Prevents large values from dominating.  
+✅ Helps Gradient Descent learn faster.  
 ✅ Improves model performance.
 
----
 
+---
 # Questions
 
 1. What is Feature Scaling?
