@@ -574,7 +574,7 @@ A medium (good) Learning Rate is usually the best because it is both fast and st
 
 
 ---
-# How Does Gradient Descent Work?
+## How Does Gradient Descent Work?
 Now we know:  
 ✅ Gradient → Shows the direction.  
 ✅ Learning Rate → Decides the step size.   
@@ -582,148 +582,79 @@ Now we know:
 But one question is still left. **How does the Machine Learning model actually improve itself?** Let's understand it step by step.
 
 ---
-# Step 1 : Make a Prediction
-
-The model first predicts an answer.
-
-Example:
-
-Actual House Price = ₹40 Lakh
-
-Model Prediction = ₹25 Lakh
-
-Current Situation
+## Step 1 : Make a Prediction
+The model first predicts an answer.  
+Example:  
+Actual House Price = ₹40 Lakh  
+Model Prediction = ₹25 Lakh  
+Current Situation  
 
 ```text
-Actual Price
-
-40
-
-Predicted Price
-
-25
+Actual Price -40  
+Predicted Price -25  
 ```
-
-The prediction is not correct.
-
-So,
-
-there is an error.
+The prediction is not correct. So,there is an error.
 
 ---
-
-# Step 2 : Calculate the Error
-
-The model compares
-
-Actual Answer
-
-with
-
-Predicted Answer.
-
+## Step 2 : Calculate the Error: 
+The model compares Actual Answer with Predicted Answer.
 ```text
-Actual Price
-
-40
-
+Actual Price   - 40
 ↓
-
-Predicted Price
-
-25
-
+Predicted Price -25
 ↓
-
 Error = 15
 ```
+The bigger the error, the worse the model.   
 
-The bigger the error,
-
-the worse the model.
 
 ---
-
-# Step 3 : Calculate the Cost
-
-Now the model asks,
-
-"How bad is my prediction?"
-
-This is measured using the **Cost Function**.
-
+## Step 3 : Calculate the Cost
+Now the model asks, "How bad is my prediction?" This is measured using the **Cost Function**.   
 Large Error
-
 ↓
-
 High Cost
-
 Small Error
-
 ↓
-
 Low Cost
 
-Suppose,
-
-Current Cost = 120
-
-The model now wants to reduce this cost.
+Suppose, Current Cost = 120   
+The model now wants to reduce this cost.  
 
 ---
-
-# Step 4 : Find the Direction
-
-Now Gradient comes into action.
-
-Gradient tells the model,
-
-> "Move in this direction."
-
-It does not change the model.
-
-It only gives the correct direction.
-
+## Step 4 : Find the Direction
+Now Gradient comes into action. Gradient tells the model,
+> "Move in this direction."  
+It does not change the model. It only gives the correct direction.  
 Example
-
 ```text
+
 Current Position
 
 ↓
-
 Gradient
 
 ↓
-
 Go Left
-```
 
+```
 OR
 
-```text
+```text 
 Current Position
-
 ↓
-
 Gradient
-
 ↓
-
 Go Right
-```
-
+``` 
 The model follows the direction suggested by the Gradient.
 
 ---
 
-# Step 5 : Take a Step
+## Step 5 : Take a Step   
+Now Learning Rate decides how big the next step should be.
 
-Now Learning Rate decides
-
-how big the next step should be.
-
-Example
-
+Example  
 Small Learning Rate
 
 ```text
@@ -746,7 +677,7 @@ Very slow.
 
 ---
 
-Good Learning Rate
+Good Learning Rate   
 
 ```text
 😀
@@ -764,7 +695,7 @@ Fast and accurate.
 
 ---
 
-Large Learning Rate
+Large Learning Rate  
 
 ```text
 😀
@@ -788,59 +719,41 @@ Overshoots the target.
 
 ---
 
-# Step 6 : Update the Model
-
+## Step 6 : Update the Model  
 The model changes itself a little.
 
 Old Model
-
 ↓
-
 New Model
-
 ↓
-
 Better Prediction
+
 
 Example
 
-First Prediction
-
-₹25 Lakh
+First Prediction ₹25 Lakh
 
 ↓
 
-Second Prediction
-
-₹31 Lakh
+Second Prediction ₹31 Lakh
 
 ↓
 
-Third Prediction
-
-₹36 Lakh
+Third Prediction ₹36 Lakh
 
 ↓
 
-Fourth Prediction
-
-₹39 Lakh
+Fourth Prediction ₹39 Lakh
 
 ↓
 
-Final Prediction
-
-₹40 Lakh
-
+Final Prediction ₹40 Lakh  
 Every step reduces the error.
 
 ---
 
-# Step 7 : Repeat Again
-
-Gradient Descent does not stop after one step.
-
-It repeats the same process many times.
+## Step 7 : Repeat Again
+Gradient Descent does not stop after one step. It repeats the same process many times.
 
 ```text
 Prediction
@@ -878,48 +791,28 @@ Every repetition is called an **Iteration**.
 
 ---
 
-# What is an Iteration?
-
+## What is an Iteration?
 One complete cycle of Gradient Descent is called an **Iteration**.
 
-Example
-
-Iteration 1
-
-Prediction = 25
+Example  
+Iteration 1: Prediction = 25
 
 ---
-
-Iteration 2
-
-Prediction = 31
+Iteration 2: Prediction = 31
 
 ---
-
-Iteration 3
-
-Prediction = 36
+Iteration 3 : Prediction = 36
 
 ---
-
-Iteration 4
-
-Prediction = 39
+Iteration 4 : Prediction = 39
 
 ---
+Iteration 5 : Prediction = 40
 
-Iteration 5
-
-Prediction = 40
-
-The more useful iterations,
-
-the better the model becomes.
+The more useful iterations, the better the model becomes.
 
 ---
-
-# Complete Flow
-
+## Complete Flow
 ```text
 Training Data
 
@@ -965,8 +858,7 @@ Best Model
 ```
 
 ---
-
-# Easy Trick
+## Easy Trick
 
 ```text
 Predict
@@ -992,118 +884,78 @@ Improve Model
 Repeat
 ```
 
-Remember this flow.
-
-Almost every Machine Learning algorithm follows this idea.
+Remember this flow. Almost every Machine Learning algorithm follows this idea.
 
 ---
-
-# Real-Life Example
-
+## Real-Life Example
 Imagine you are learning basketball.
 
-First Throw
-
-❌ Missed
+First Throw ❌ Missed
 
 ↓
 
-Coach tells you
-
-"Throw a little higher."
+Coach tells you "Throw a little higher."
 
 ↓
 
-Second Throw
-
-Closer.
+Second Throw Closer.
 
 ↓
 
-Coach again
-
-"A little more."
+Coach again "A little more."
 
 ↓
 
-Third Throw
-
-Almost correct.
+Third Throw Almost correct.
 
 ↓
 
-Fourth Throw
+Fourth Throw Basket!
 
-🏀 Basket!
+The Coach is like the **Gradient**. Your step of improvement is like the **Learning Rate**. Practicing again and again is like **Iterations**.Finally, you become better. This is exactly how Gradient Descent improves a Machine Learning model.
 
-The Coach is like the **Gradient**.
-
-Your step of improvement is like the **Learning Rate**.
-
-Practicing again and again is like **Iterations**.
-
-Finally,
-
-you become better.
-
-This is exactly how Gradient Descent improves a Machine Learning model.
+---
+## Summary
+✅ Model makes a prediction.  
+✅ Error is calculated.  
+✅ Cost Function measures the error.  
+✅ Gradient shows the direction.  
+✅ Learning Rate decides the step size.  
+✅ Model updates itself.  
+✅ The process repeats until the error becomes very small.  
 
 ---
 
-# Summary
 
-✅ Model makes a prediction.
 
-✅ Error is calculated.
 
-✅ Cost Function measures the error.
 
-✅ Gradient shows the direction.
-
-✅ Learning Rate decides the step size.
-
-✅ Model updates itself.
-
-✅ The process repeats until the error becomes very small.
 
 ---
 
-# Homework
+# Homework Solutions
 
-## Question 1
-
-What is the first step in Gradient Descent?
-
----
-
-## Question 2
-
-What does the Cost Function measure?
+## Question 1: What is the first step in Gradient Descent?
+The first step is to make a prediction.
 
 ---
-
-## Question 3
-
-What is the job of Gradient?
+## Question 2: What does the Cost Function measure?
+The Cost Function measures how much error the model has.
 
 ---
-
-## Question 4
-
-What is the job of Learning Rate?
+## Question 3: What is the job of Gradient?
+Gradient shows the direction in which the model should move to reduce the error.
 
 ---
-
-## Question 5
-
-What is an Iteration?
+## Question 4: What is the job of Learning Rate?
+Learning Rate decides how big or small the next step should be.
 
 ---
+## Question 5: What is an Iteration?
+One complete cycle of Gradient Descent is called an Iteration.
 
-## Question 6
-
-Arrange these in the correct order.
-
+---
+## Question 6: Arrange these in the correct order.
 - Gradient
 - Prediction
 - Cost Function
@@ -1111,42 +963,7 @@ Arrange these in the correct order.
 - Error
 - Update Model
 
----
-
-# Homework Solutions
-
-## Question 1
-
-The first step is to make a prediction.
-
----
-
-## Question 2
-
-The Cost Function measures how much error the model has.
-
----
-
-## Question 3
-
-Gradient shows the direction in which the model should move to reduce the error.
-
----
-
-## Question 4
-
-Learning Rate decides how big or small the next step should be.
-
----
-
-## Question 5
-
-One complete cycle of Gradient Descent is called an Iteration.
-
----
-
-## Question 6
-
+answer : 
 Correct Order
 
 ```text
@@ -1177,47 +994,570 @@ Update Model
 
 
 
+# Gradient Descent Python Code Explanation
+In this program, we will build a simple Linear Regression model using **Gradient Descent from Scratch**.
+
+The goal is to find the **best values of `m` (slope)** and **`b` (intercept)** so that the prediction becomes as close as possible to the actual data.
+
+---
+# Complete Code
+
+```python
+import numpy as np
+
+# Dataset
+X = np.array([1, 2, 3, 4, 5], dtype=float)
+y = np.array([2, 4, 6, 8, 10], dtype=float)
+
+# Initialize parameters
+m = 0
+b = 0
+
+# Hyperparameters
+learning_rate = 0.01
+epochs = 1000
+
+# Number of data points
+n = len(X)
+
+# Gradient Descent
+for i in range(epochs):
+
+    # Prediction
+    y_pred = m * X + b
+
+    # Error
+    error = y - y_pred
+
+    # Calculate gradients
+    dm = (-2/n) * np.sum(X * error)
+    db = (-2/n) * np.sum(error)
+
+    # Update parameters
+    m = m - learning_rate * dm
+    b = b - learning_rate * db
+
+print("Slope (m):", m)
+print("Intercept (b):", b)
+```
+
+---
+## Line-by-Line Explanation
+
+## Step 1 : import numpy as np
+We import the **NumPy** library. NumPy helps us perform mathematical calculations and work with arrays easily.
+
+Without NumPy, writing Machine Learning code would be much more difficult.
+
+---
+## Step 2 : Create the Dataset : 
+### X = np.array([1,2,3,4,5], dtype=float)
+
+`X` contains the **input values (Features)**. These represent the study hours.
+```text
+Study Hours
+1
+2
+3
+4
+5
+```
+
+---
+### y = np.array([2,4,6,8,10], dtype=float)
+
+`y` contains the **correct answers (Labels)**. These represent the marks.
+
+```text
+Study Hours
+
+↓
+
+Marks
+
+1 → 2
+
+2 → 4
+
+3 → 6
+
+4 → 8
+
+5 → 10
+```
+
+The model will learn the relationship between **Study Hours** and **Marks**.
+
+---
+
+## Step 3 : Initialize Parameters
+
+```python
+m = 0
+b = 0
+```
+
+### Explanation
+
+Initially, the model knows nothing. So,
+
+Slope (`m`) = 0
+
+Intercept (`b`) = 0
+
+Current Equation
+
+```text
+y = 0x + 0
+```
+
+This means every prediction will be **0**.
+
+---
+## Step 4 : Set the Learning Rate
+
+```python
+learning_rate = 0.01
+```
+
+### Explanation
+Learning Rate decides **how much the model should change itself in one iteration.**
+
+Small value
+
+↓
+
+Slow Learning
+
+Large value
+
+↓
+
+May overshoot
+
+Good value
+
+↓
+
+Fast and Stable Learning
+
+---
+## Step 5 : Set Number of Iterations
+
+```python
+epochs = 1000
+```
+
+### Explanation
+
+`epochs` tells the model how many times it should repeat the learning process.
+
+`**One complete pass through the entire training dataset is called an **Epoch**.
+
+During one Epoch, the model may perform one or more **Iterations**, depending on the batch size.
+
+> Note:
+> In this chapter, we use the entire dataset at once, so one Epoch is equal to one Iteration..**`
+
+More epochs
+
+↓
+
+More learning
+
+↓
+
+Better prediction
+
+---
+## Step 6 : Count the Data
+
+```python
+n = len(X)
+```
+
+### Explanation
+
+`len(X)` counts the total number of training examples.
+
+Here,
+
+```text
+X = [1,2,3,4,5]
+
+Total = 5
+```
+
+So,
+
+```python
+n = 5
+```
+This value is used while calculating the Gradient.
+
+---
+## Step 7 : Start Gradient Descent
+```python
+for i in range(epochs):
+```
+
+### Explanation  
+The model repeats the learning process **1000 times**. Each repetition is called an **Iteration**. Every iteration makes the prediction a little better.
+
+---
+## Step 8 : Make Prediction
+
+```python
+y_pred = m * X + b
+```
+
+### Explanation
+
+The model predicts the output using the current values of `m` and `b`.
+
+Initially,
+
+```text
+m = 0
+
+b = 0
+```
+
+Equation
+
+```text
+y = 0x + 0
+```
+
+Predictions
+
+```text
+0
+0
+0
+0
+0
+```
+
+The prediction is completely wrong.
+
+---
+## Step 9 : Calculate Error
+
+```python
+error = y - y_pred
+```
+
+### Explanation
+
+The model compares Actual Output with Predicted Output.  
+
+Formula
+```text
+Error = Actual - Prediction
+```
+
+Example
+
+```text
+Actual = 10 , Prediction = 0
+
+Error= 10-0 
+
+Error = 10
+```
+
+If the error is large, the model knows it needs to improve.
 
 
+---
+## Step 10 : Calculate Gradient
+```python
+dm = (-2/n) * np.sum(X * error)
+```
+
+### Explanation
+This calculates the Gradient for the **Slope (`m`)**. Gradient tells us- Which direction to move. How much m should change.
+
+If the Gradient is large, the slope needs a bigger update.
 
 
+---
+```python
+db = (-2/n) * np.sum(error)
+```
+
+### Explanation
+This calculates the Gradient for the **Intercept (`b`)**. It tells us how much the value of `b` should change.
 
 
+---
+## Step 11 : Update Parameters
+```python
+m = m - learning_rate * dm
+```
+
+### Explanation
+This updates the value of **Slope (`m`)**. Formula: 
+
+```text
+New m = Old m - Learning Rate × Gradient
+```
+
+The model moves one step closer to the best line.
 
 
+---
+```python
+b = b - learning_rate * db
+```
+
+### Explanation
+This updates the value of **Intercept (`b`)**. After every iteration, the line becomes better.
 
 
+---
+## Step 12 : Print Final Values
 
-## Important Questions
-1.  What is Gradient Descent?  
-2.  Why is Gradient Descent important?  
-3.  What is the goal of Gradient Descent?  
-4.  What is a Cost Function?  
-5.  Can Gradient Descent increase the prediction error?  
-6.  Why does Gradient Descent move step by step?  
-7.  What does the lowest point of the mountain represent?  
-8.  What happens when the Cost Function becomes very small?  
-9.  What is Gradient?   
-10. What is the purpose of Gradient?
-11. Does Gradient update the model?
-12. What is the difference between Gradient and Gradient Descent?
-13. Why is Gradient important in Machine Learning?
-14. What is Learning Rate?
-15. Why is Learning Rate important?
-16. What happens if the Learning Rate is too small or too large?
-17. Which Learning Rate gives the best performance?
-18. Can a very large Learning Rate prevent the model from converging?
-19. Why does a very small Learning Rate take more time?
-20. What is the relationship between Gradient and Learning Rate?
-21. How does Gradient Descent work?
-22. What is the first step of Gradient Descent?
-23. Why do we calculate the Cost Function?
-24. What is the role of Gradient?
-25. What is the role of Learning Rate?
-26. What is an Iteration?
-27. When does Gradient Descent stop?
-28. Why does the model update itself repeatedly?
-29. What happens after every iteration?
-30. Explain the complete workflow of Gradient Descent.
+```python
+print("Slope (m):", m)
+```
+
+### Explanation
+Prints the final value of the Slope.
 
 
+---
+```python
+print("Intercept (b):", b)
+```
+
+### Explanation
+Prints the final value of the Intercept. After enough iterations, the model learns approximately
+
+```text
+m ≈ 2
+
+b ≈ 0
+```
+
+Final Equation
+
+```text
+y = 2x + 0
+```
+
+---
+# Complete Flow
+
+```text
+Dataset
+↓
+Initialize m and b
+↓
+Prediction
+↓
+Error
+↓
+Gradient
+↓
+Update m and b
+↓
+Better Prediction
+↓
+Repeat
+↓
+Best Line Found
+```
+
+---
+
+# Easy Trick to Remember
+
+```text
+Data
+↓
+Guess
+↓
+Error
+↓
+Gradient
+↓
+Learning Rate
+↓
+Update
+↓
+Repeat
+↓
+Best Model
+```
+
+---
+# Summary
+- `X` → Input (Feature)
+- `y` → Correct Output (Label)
+- `m` → Slope of the Line
+- `b` → Intercept of the Line
+- `learning_rate` → Step Size
+- `epochs` → Number of times the model learns from the entire dataset
+- `y_pred` → Predicted Output
+- `error` → Difference Between Actual and Prediction
+- `dm` → Gradient of Slope
+- `db` → Gradient of Intercept
+
+Gradient Descent repeats this process until the model finds the best line with minimum error.
+
+# Gradient Descent Summary
+
+Gradient Descent is an optimization algorithm used to reduce the prediction error by updating the model parameters step by step.
+
+---
+
+## Important Concepts
+
+- Gradient → Shows the direction.
+- Learning Rate → Decides the step size.
+- Cost Function → Measures the error.
+- Epoch → One complete learning cycle.
+- Iteration → One update of the model.
+- Slope (m) → Controls the tilt of the line.
+- Intercept (b) → Starting point of the line.
+
+---
+
+## Complete Flow
+
+```text
+Training Data
+
+↓
+
+Prediction
+
+↓
+
+Error
+
+↓
+
+Cost Function
+
+↓
+
+Gradient
+
+↓
+
+Learning Rate
+
+↓
+
+Update Parameters
+
+↓
+
+Better Prediction
+
+↓
+
+Repeat
+
+↓
+
+Best Model
+```
+
+---
+
+## Formula
+
+Gradient Descent Update Rule
+
+```text
+New Parameter= Old Parameter-Learning Rate × Gradient
+```
+
+---
+
+## Easy Trick
+
+```text
+Data
+
+↓
+
+Prediction
+
+↓
+
+Error
+
+↓
+
+Gradient
+
+↓
+
+Learning Rate
+
+↓
+
+Update
+
+↓
+
+Repeat
+
+↓
+
+Best Model
+```
+
+---
+
+## Remember
+
+✅ Gradient shows the direction.
+
+✅ Learning Rate decides the step size.
+
+✅ Cost tells how wrong the prediction is.
+
+✅ Gradient Descent updates the model.
+
+✅ Repeating this process reduces the error.
+
+---
+## One-Line Definition
+Gradient Descent is an optimization algorithm that finds the best model parameters by reducing the prediction error step by step.
+
+---
+
+
+# Important Questions
+
+1. What is Gradient Descent?
+2. Why is Gradient Descent important?
+3. What is the goal of Gradient Descent?
+4. What is a Cost Function?
+5. What is Gradient?
+6. What is the purpose of Gradient?
+7. What is the difference between Gradient and Gradient Descent?
+8. Why is Gradient important in Machine Learning?
+9. What is Learning Rate?
+10. Why is Learning Rate important?
+11. What happens if the Learning Rate is too small?
+12. What happens if the Learning Rate is too large?
+13. Can a very large Learning Rate prevent the model from converging?
+14. Why does Gradient Descent move step by step?
+15. How does Gradient Descent reduce error?
+16. What is an Iteration?
+17. What is an Epoch?
+18. What is the first step of Gradient Descent?
+19. What is the complete workflow of Gradient Descent?
+20. What happens after every iteration?
+21. When does Gradient Descent stop?
+22. What does the lowest point of the mountain represent?
+23. What happens when the Cost Function becomes very small?
+24. Does Gradient update the model?
+25. What is the relationship between Gradient and Learning Rate?
