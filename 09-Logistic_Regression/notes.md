@@ -669,7 +669,201 @@ Multi-Label Classification - Predicts multiple classes for one input.
 0 = Fail  / 1 = Pass
 
 
-# Homework
+## Sigmoid Function
+A Sigmoid Function is a mathematical function that converts any number into a value between 0 and 1.       
+In simple words, the Sigmoid Function converts the output of the Linear Equation into a Probability between 0 and 1.
+
+## 🤔 Why Do We Need Sigmoid?
+Suppose the Linear Equation gives
+```
+-25
+5
+20
+150 
+1000
+```
+These values cannot represent probabilities. Probability should always be 0 to 1.       
+So we need a function that converts
+
+-25 → 0.00        
+5 → 0.99         
+150 → 1.00
+That function is called the Sigmoid Function.
+
+
+---
+## Real-Life Example
+Imagine an exam. Teacher calculates your marks. Marks = 82       
+Now your parents ask, "What is the chance that you passed?" Instead of saying 82 You say 99%.      
+This conversion:  Marks → Probability  is similar to what the Sigmoid Function does.
+
+Another Example : Weather App       
+Temperature → Chance of Rain → 95%
+
+The app shows probability instead of raw calculations.
+
+The Sigmoid Function works in the same way.
+
+Input and Output
+Input → -100 → Sigmoid → 0.00
+Important Property
+
+No matter how large or small the input is, the output is always between 0 → 1
+
+
+---
+## Formula
+           1
+P = ----------------
+      1 + e^-z
+
+Where:    
+P = Probability     
+e = Euler's Number ≈ 2.718      
+z = Output of the Linear Equation
+
+
+
+Scikit-learn calculates the formula automatically.
+Example
+z = 3 
+3 → Sigmoid → 0.95 → 95% Chance of Pass
+
+now z = -3
+-3 → Sigmoid → 0.04 → 4% Chance of Pass  / 96% Chance of Fail
+
+
+---
+## Complete Workflow
+Study Hours → Linear Equation → z = 2.8 → Sigmoid Function → Probability = 0.94 → 94% → Pass
+
+
+---
+## Easy Trick
+Linear Equation → Any Number → Sigmoid → 0 to 1 → Probability
+
+
+
+## Summary
+✅ Used in Logistic Regression.       
+✅ Converts numbers into probabilities.
+✅ Output is always between 0 and 1.      
+✅ Has an S-shaped curve.     
+✅ Used before making the final prediction.
+
+
+-----
+## Decision Boundary
+A Decision Boundary is a threshold (cut-off value) that converts the probability predicted by Logistic Regression into the final class.
+
+In simple words, Decision Boundary decides Class 0 or Class 1.
+Decision Boundary is the probability value used to separate one class from another.
+
+Usually, Decision Boundary = 0.5
+
+
+---
+## Why Do We Need Decision Boundary?
+Suppose Sigmoid gives 0.87 . This is only a probability. The model still needs to decide Pass or Fail
+The rule used for this decision is called the Decision Boundary.
+
+
+---
+## Standard Rule
+
+Probability ≥ 0.5 → Class = 1
+Probability < 0.5 → Class = 0
+
+Example 1
+Probability = 0.92
+0.92 > 0.5 → Pass
+Class = 1
+
+Example 2
+Probability = 0.18
+0.18 < 0.5 → Fail
+Class =0
+
+
+
+---
+## Real-Life Example
+Imagine a college. Rule
+
+Marks ≥ 50 → Pass     
+Marks < 50 → Fail
+
+Here, 50 Marks is the Decision Boundary.       
+Similarly, in Logistic Regression, 0.5 is the default Decision Boundary.
+
+
+## Can Decision Boundary Change?
+✅ Yes. The default is 0.5 but it can be changed.
+
+Hospital 
+0.30 Doctors want to detect disease early.
+
+Bank
+0.80 Banks approve loans only when they are highly confident.
+
+
+
+---
+## Complete Workflow
+Input → Linear Equation → z → Sigmoid → Probability → Decision Boundary → Final Prediction
+
+
+---
+## Decision Boundary Table
+Probability	Prediction
+0.10	Class 0
+0.25	Class 0
+0.49	Class 0
+0.50	Class 1
+0.75	Class 1
+0.95	Class 1
+
+
+--- 
+## Easy Trick
+Probability → Compare with 0.5 → if 
+prob < 0.5 → Class 0        
+Prob ≥ 0.5 → Class 1
+------------------
+
+
+## Summary
+✅ Comes after the Sigmoid Function.           
+✅ Uses probability.          
+✅ Default threshold = 0.5.       
+✅ Decides the final class.       
+✅ Can be changed depending on the problem.
+
+⭐
+
+## Final Workflow (Must Add)
+Input
+   │
+   ▼
+Linear Equation
+(z = wx + b)
+   │
+   ▼
+Sigmoid Function
+   │
+   ▼
+Probability (0 to 1)
+   │
+   ▼
+Decision Boundary (0.5)
+   │
+   ▼
+Final Prediction
+(Pass / Fail)
+
+
+
+## solve 
 
 ## Question 1: Predict for [[2]]. What is the output?
 ```python
